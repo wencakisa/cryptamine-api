@@ -39,6 +39,19 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+group :test do
+  # Code Coverage
+  gem 'simplecov'
+  # Fake mock data for testing
+  gem 'faker'
+  # Rails factories
+  gem 'factory_bot_rails'
+  # Database cleaner
+  gem 'database_cleaner'
+  # Shoulda
+  gem 'shoulda'
+end
+
 group :production do
   # Use PostgreSQL as production database
   gem 'pg'
