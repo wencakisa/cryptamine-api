@@ -22,11 +22,12 @@ class RsasController < ApplicationController
   end
 
   private
-    def set_rsa
-      @rsa = Rsa.find params[:id]
-    end
 
-    def rsa_params
-      params.permit(:n, :e, :d)
-    end
+  def set_rsa
+    @rsa = Rsa.find params[:id]
+  end
+
+  def rsa_params
+    params.permit(:n, :e, :d)
+  end
 end

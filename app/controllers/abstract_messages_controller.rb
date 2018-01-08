@@ -16,27 +16,30 @@ class AbstractMessagesController < ApplicationController
   end
 
   private
-    def set_rsa
-      @rsa = Rsa.find params[:rsa_id]
-    end
 
-    def set_message
-      @message = rsa_messages.find params[:id]
-    end
+  def set_rsa
+    @rsa = Rsa.find params[:rsa_id]
+  end
 
-    def message_params
-      params.require(:message)
-    end
+  def set_message
+    @message = rsa_messages.find params[:id]
+  end
+
+  def message_params
+    params.require(:message)
+  end
 
   protected
-    # TODO: Check how to make this "abstract" controller a really abstract one, "the Rails way"
-    # These two methods should be overriden in children
 
-    def rsa_messages
-      raise
-    end
+  # TODO: Check how to make this "abstract" controller a really abstract one,
+  # "the Rails way"
+  # These two methods should be overriden in children
 
-    def evaluated_message
-      raise
-    end
+  def rsa_messages
+    raise
+  end
+
+  def evaluated_message
+    raise
+  end
 end
