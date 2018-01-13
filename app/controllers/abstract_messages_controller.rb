@@ -26,7 +26,7 @@ class AbstractMessagesController < ApplicationController
   end
 
   def message_params
-    params.require(:message)
+    params.require :message
   end
 
   protected
